@@ -88,6 +88,11 @@ when no DOI is visible.
   name is often not the registering body (the Commission on Growth and Development has
   no membership; its papers are World Bank DOIs under `10.1596`).
 
+**Never write an at-sign in a `%` comment.** BibTeX parsers still scan comments for it
+and read it as the start of a new entry; the error then points somewhere else entirely
+(citation-js: `expected "lbrace", got "label"`). Write "on article entries", not the
+entry type with its at-sign.
+
 **4. Publisher page unavailable** → use the best other source — RePEc
 (`ideas.repec.org`), the institution's series listing, the PDF's cover page, an archived
 copy — and name it in the comment:
