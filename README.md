@@ -84,8 +84,17 @@ Get-ChildItem "$HOME\pier-agent-skills\skills" -Directory | ForEach-Object {
 }
 ```
 
-**Updating:** `git -C ~/pier-agent-skills pull` updates every linked skill in place. Re-run
-the loop only when a new skill is added to the repo, to link it too.
+**Updating** — this updates every linked skill in place:
+
+```sh
+git -C ~/pier-agent-skills pull               # macOS / Linux
+```
+
+```powershell
+git -C "$HOME\pier-agent-skills" pull         # Windows (PowerShell)
+```
+
+Re-run the link loop only when a new skill is added to the repo, to link it too.
 
 Why clone outside the skills root rather than into it: a clone at
 `~/.copilot/skills/agent-skills` would itself look like a (broken) skill folder with
