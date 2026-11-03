@@ -220,6 +220,11 @@ def main() -> None:
     m = sub.add_parser("meta"); m.add_argument("url")
     n = sub.add_parser("normalize"); n.add_argument("file", nargs="?")
     a = p.parse_args()
+    # Windows consoles default to a legacy code page; names like "Benoît" or Thai
+    # titles would raise UnicodeEncodeError without this.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
     try:
         if a.cmd == "search":
             cmd_search(a.text, a.rows)

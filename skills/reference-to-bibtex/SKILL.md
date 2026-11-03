@@ -38,7 +38,8 @@ Ask which the user wants if it is not clear from context; default to **enrich**.
 ## Tools
 
 `scripts/bibtools.py` (Python 3, standard library only) does the mechanical work.
-Run it with the skill directory's path:
+Run it with the skill directory's path. On Windows the interpreter is usually `py` or
+`python`, not `python3`:
 
 ```
 python3 scripts/bibtools.py search "<title + authors + year>" [--rows 3]   # Crossref candidates as JSON

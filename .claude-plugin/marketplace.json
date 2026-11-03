@@ -9,6 +9,7 @@
     {
       "name": "citations",
       "description": "Turn free-text references into verified BibTeX via Crossref, doi.org and publisher pages.",
+      "version": "0.1.0",
       "source": "./",
       "strict": false,
       "skills": [
