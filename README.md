@@ -93,8 +93,9 @@ no `SKILL.md`, and its skills would sit one level too deep to be found.
 
 **VS Code only — point a setting at the clone instead of linking.** VS Code has a
 `chat.agentSkillsLocations` setting that can name `~/pier-agent-skills/skills` directly, so
-no links are needed. Its documentation is inconsistent about whether it is deprecated,
-and it is not read by Copilot CLI or other clients, so prefer the links above.
+no links are needed. It is supported, but it is an editor setting: GitHub Copilot CLI and
+the GitHub Copilot app do not inherit it. VS Code's docs recommend native folders, so use
+the links above if you use Copilot outside the editor.
 
 **Not keeping it updated?** Copying a single folder works too, e.g. into a project's
 `.github/skills/` — but that copy never updates.
